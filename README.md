@@ -1,4 +1,4 @@
-# Exercício de Django
+# django-bsi4
 
 API REST de produtos construída com Django e Django REST Framework, com CRUD completo, validações, filtros, ordenação, busca textual e paginação.
 
@@ -13,25 +13,26 @@ API REST de produtos construída com Django e Django REST Framework, com CRUD co
 
 ## Estrutura do projeto
 
+```
 django-bsi4/
 ├── manage.py
 ├── pyproject.toml
-├── produtos.json
+├── produtos.json              # dados de exemplo (fixture)
 ├── config/
 │   ├── settings.py
 │   ├── urls.py
 │   ├── wsgi.py
 │   └── asgi.py
 └── produtos/
-    ├── models.py
-    ├── admin.py
-    ├── serializers.py
-    ├── filters.py
-    ├── views.py
-    ├── pagination.py
-    ├── tests.py
-    └── migrations/
-
+    ├── models.py               # modelo Produto
+    ├── admin.py                # configuração do Django Admin
+    ├── serializers.py          # serialização e validações
+    ├── filters.py               # filtros da API
+    ├── views.py                 # ViewSet com filtros, ordenação e busca
+    ├── pagination.py             # paginação customizada
+    ├── tests.py                   # testes automatizados
+    └── migrations/                # histórico do banco de dados
+```
 
 ## Modelo de dados
 
