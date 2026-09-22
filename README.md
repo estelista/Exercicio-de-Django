@@ -16,21 +16,21 @@ API REST de produtos construída com Django e Django REST Framework, com CRUD co
 django-bsi4/
 ├── manage.py
 ├── pyproject.toml
-├── produtos.json # dados de exemplo (fixture)
+├── produtos.json
 ├── config/
-│ ├── settings.py
-│ ├── urls.py
-│ ├── wsgi.py
-│ └── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
 └── produtos/
-├── models.py # modelo Produto
-├── admin.py # configuração do Django Admin
-├── serializers.py # serialização e validações
-├── filters.py # filtros da API
-├── views.py # ViewSet com filtros, ordenação e busca
-├── pagination.py # paginação customizada
-├── tests.py # testes automatizados
-└── migrations/ # histórico do banco de dados
+    ├── models.py
+    ├── admin.py
+    ├── serializers.py
+    ├── filters.py
+    ├── views.py
+    ├── pagination.py
+    ├── tests.py
+    └── migrations/
 
 
 ## Modelo de dados
