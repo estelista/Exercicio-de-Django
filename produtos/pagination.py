@@ -6,18 +6,7 @@ from rest_framework.response import Response
 
 
 class ProdutoPagination(PageNumberPagination):
-    """
-    Paginação customizada para preservar o contrato usado nas
-    Partes 1-6 (Express/FastAPI):
 
-        { "page": ..., "page_size": ..., "total_pages": ..., "results": [...] }
-
-    Normalmente não é necessário sobrescrever paginate_queryset() para
-    usar paginação no DRF. Esta sobrescrita existe especificamente para
-    reproduzir o comportamento anterior: uma página além da última
-    retorna 200 com results vazio, em vez do erro padrão de página
-    inválida.
-    """
 
     page_size_query_param = "page_size"
     max_page_size = 100

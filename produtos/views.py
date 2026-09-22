@@ -18,5 +18,4 @@ class ProdutoViewSet(ModelViewSet):
     ordering = ("id",)
 
     # Aula 26 — marca e descricao entram na busca; estoque fica de fora
-    # (é numérico e poluiria os resultados de busca textual)
     search_fields = ("nome", "marca", "descricao")

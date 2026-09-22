@@ -4,11 +4,6 @@ from .models import Produto
 
 
 class ProdutoAula26Tests(APITestCase):
-    """
-    Testes cobrindo o exercício da Aula 26 — Evoluindo o Produto:
-    marca, estoque e descricao percorrendo validação, filtro,
-    ordenação e busca.
-    """
 
     def setUp(self):
         Produto.objects.create(
@@ -102,7 +97,6 @@ class ProdutoAula26Tests(APITestCase):
         self.assertNotIn("Mouse Sem Fio", nomes)
 
     def test_estoque_nao_participa_da_busca(self):
-        # busca por "15" (estoque do Notebook Pro) não deve retornar nada
         response = self.client.get("/api/produtos/?search=15")
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data["results"], [])

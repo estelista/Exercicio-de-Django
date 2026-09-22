@@ -4,14 +4,12 @@ from .models import Produto
 
 
 class ProdutoFilter(filters.FilterSet):
-    # Aula 23 — filtro por faixa de preço
     preco_minimo = filters.NumberFilter(field_name="preco", lookup_expr="gte")
     preco_maximo = filters.NumberFilter(field_name="preco", lookup_expr="lte")
 
-    # Aula 26 — filtro exato por marca (case-insensitive)
     marca = filters.CharFilter(field_name="marca", lookup_expr="iexact")
 
-    # Aula 26 — filtro por faixa de estoque
+
     estoque_minimo = filters.NumberFilter(field_name="estoque", lookup_expr="gte")
     estoque_maximo = filters.NumberFilter(field_name="estoque", lookup_expr="lte")
 

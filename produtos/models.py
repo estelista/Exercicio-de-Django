@@ -6,7 +6,7 @@ class Produto(models.Model):
     nome = models.CharField(max_length=100)
     preco = models.DecimalField(max_digits=8, decimal_places=2)
 
-    # Aula 26 — Exercício: Evoluindo o Produto
+
     marca = models.CharField(max_length=50, default="Genérica")
     estoque = models.IntegerField(default=0)
     descricao = models.TextField(blank=True, null=True)
